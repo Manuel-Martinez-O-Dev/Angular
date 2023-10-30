@@ -1,0 +1,21 @@
+:root {
+    --color-dominante: #05BFDB;
+    --color-furte: #00FFCA;
+    --color-oscuro: #000;
+    --color-claro: #FFFFFF;
+    --color-gris: #222222;
+    --color-gris-oscuro: #161616;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Optimistic Display,-apple-system,ui-sans-serif,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #161616;
+}

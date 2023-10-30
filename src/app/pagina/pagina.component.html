@@ -4,6 +4,13 @@
     <a href="#prim_par"><p class="dominante">primer parcial</p></a>
     
 </div>
+<div id="svg_fondo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="capa-sup" class="animate">
+        <path fill="#00FFCA" fill-opacity="0.5" d="M0,64L40,80C80,96,160,128,240,160C320,192,400,224,480,240C560,256,640,256,720,218.7C800,181,880,107,960,106.7C1040,107,1120,181,1200,197.3C1280,213,1360,171,1400,149.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+        <path fill="#05BFDB" fill-opacity="0.25" d="M0,32L40,42.7C80,53,160,75,240,101.3C320,128,400,160,480,149.3C560,139,640,85,720,85.3C800,85,880,139,960,170.7C1040,203,1120,213,1200,218.7C1280,224,1360,224,1400,224L1440,224L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+        <path fill="#000" fill-opacity="1" d="M0,224L40,202.7C80,181,160,139,240,112C320,85,400,75,480,90.7C560,107,640,149,720,154.7C800,160,880,128,960,128C1040,128,1120,160,1200,170.7C1280,181,1360,171,1400,165.3L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+      </svg>  
+</div>
 <div id="cont_practicas" class="">
     <a href=""></a>
     <h2 id="prim_par">Primer parcial.</h2>
@@ -22,3 +29,441 @@
             <li><a href="#lista"><span class="claro">Lista de tareas</span></a>.</li>
         </ul>
     </div>
+
+    <h3 id="primera">Primera practica.</h3>
+        <p class="parrafos">Nuestra tarea será crear una lista de contactos. Inicialmente, la lista será bastante simple: solo escribiremos a tres personas usando los datos que se muestran en la siguiente tabla. En el resto del curso, volverá a este script y lo ampliará sistemáticamente con nuevas funciones, utilizando los elementos recién aprendidos de JavaScript.</p>
+        <br>
+        <p class="parrafos">Declara e inicializa las variables donde almacenarás toda la información (nueve variables en total). Muestra en la consola información sobre el primer y último contacto en el formulario: nombre/teléfono/correo electrónico.</p>
+        <div class="codigo p_redondas">
+            <div>
+                <p><span class="dominante">let</span> name1 = <span class="naranja">'Maxwell Wright'</span>;</p>
+                <p><span class="dominante">let</span> name2 = <span class="naranja">'Rajá Villarreal'</span>;</p>
+                <p><span class="dominante">let</span> name3 = <span class="naranja">'Helen Richards'</span>;</p>
+                <br>
+                <p><span class="dominante">let</span> phone1 = <span class="naranja">'(0191) 719 6495'</span>;</p>
+                <p><span class="dominante">let</span> phone2 = <span class="naranja">'0866 398 2895'</span>;</p>
+                <p><span class="dominante">let</span> phone3 = <span class="naranja">'0800 1111'</span>;</p>
+                <br>
+                <p><span class="dominante">let</span> email1 = <span class="naranja">'Curabitur.egestas.nunc@nonummyac.co.uk'</span>;</p>
+                <p><span class="dominante">let</span> email2 = <span class="naranja">'posuere.vulputate@sed.com'</span>;</p>
+                <p><span class="dominante">let</span> email3 = <span class="naranja">'libero@convallis.edu'</span>;</p>
+                <br>
+                <p><span class="amarillo">console</span>.<span class="dominante">log</span>(<span class="morado">`name:$name1/ phone:$phone1/ email:$email1`</span>);</p>
+                <p><span class="amarillo">console</span>.<span class="dominante">log</span>(<span class="morado">`name:$name2/ phone:$phone2/ email:$email2`</span>);</p>
+                <p><span class="amarillo">console</span>.<span class="dominante">log</span>(<span class="morado">`name:$name3/ phone:$phone3/ email:$email3`</span>);</p>
+            </div>
+        </div>
+
+        <h3 id="segundo">Segunda practica.</h3>
+        <p class="parrafos">¿Recuerdas la lista de contactos que creaste mientras realizabas la tarea del laboratorio anterior? Hay que admitir que a primera vista parecía bastante extraño. Tuvimos que utilizar nueve variables para almacenar información sobre sólo tres usuarios. Lo que es peor, agregar cada nuevo usuario requeriría la creación de tres variables más. Esto no es ni conveniente ni práctico. Afortunadamente, desde entonces hemos aprendido algo sobre matrices y objetos, lo que nos permitirá guardar nuestra lista de una forma un poco más cómoda. Usando los mismos datos que en la práctica anterior, cree la lista de contactos como una matriz, cada elemento del cual será un objeto que describirá a un solo usuario. Entonces deberíamos obtener una matriz de tres elementos, y cada objeto colocado en ella contendrá tres datos (nombre, teléfono y correo electrónico).</p>
+        <br>
+        <p class="parrafos">Al final de la lista declarada de esta manera, agregue un nuevo contacto usando el método de matriz apropiado. El nuevo contacto es: Maisie Haley / 0913 531 3030 / risus.Quisque@urna.ca .</p>
+        <div class="codigo p_redondas">
+            <div>
+                <P><span class="dominante">let</span> contacts = [</P>
+                <P class="un_salto">    name: "Maxwell Wright",</P>
+                <P class="un_salto">    phone: "(0191) 719 6495",</P>
+                <P class="un_salto">    email: "Curabitur.egestas.nunc@nonummyac.co.uk"</P>
+                <P> , </P>
+                <P class="un_salto">    name: "Raja Villarreal",</P>
+                <P class="un_salto"> phone: "0866 398 2895",</P>
+                <P class="un_salto"> email: "posuere.vulputate@sed.com"</P>
+                <P> , </P>
+                <P class="un_salto">    name: "Helen Richards",</P>
+                <P class="un_salto"> phone: "0800 1111",</P>
+                <P class="un_salto"> email: "libero@convallis.edu"</P>
+                <P> , </P>
+                <P class="un_salto"> name: "Maisie Haley ",</P>
+                <P class="un_salto">    phone: "0913 531 3030",</P>
+                <P class="un_salto"> email: "risus.Quisque@urna.ca."</P>
+                <P> ];</P>
+                <br>
+                <P>for(let cont of contacts)</P>
+                <P class="un_salto">    console.log(`name::$cont.name phone::$cont.phone <P class="un_salto">email::$cont.email`);</P>
+                <P></P>
+            </div>
+        </div>
+
+        <h3 id="tercero">Tercera practica.</h3>
+        <p class="parrafos">Volvamos a nuestra lista de contactos. Después de algunos ajustes recientes (es decir, usar una matriz y objetos), en realidad está empezando a parecerse a una lista. Sin embargo, persistía un problema bastante grave. Los cambios de datos en la lista, como agregar un nuevo contacto, deben especificarse de inmediato en el código del programa. ¿Qué pasa si queremos darle al usuario la posibilidad de ingresar los datos del contacto agregado mientras el programa se está ejecutando? Modifique el programa para agregar, al final de la lista, no el contacto que se proporciona en el código, sino el que el usuario proporcionará durante la ejecución del programa. Utilizar el método prompt para hacer esto. Al final, muestra el primer y último contacto de la lista.</p>
+        <div class="codigo p_redondas">
+            <div>
+                <p><span class="dominante">let</span> contacts = [</p>
+                <p class="un_salto">    name: "Maxwell Wright",</p>
+                <p class="un_salto">    phone: "(0191) 719 6495",</p>
+                <p class="un_salto">    email: "Curabitur.egestas.nunc@nonummyac.co.uk"</p>
+                <p> , </p>
+                <p class="un_salto"> name: "Raja Villarreal",</p>
+                <p class="un_salto">    phone: "0866 398 2895",</p>
+                <p class="un_salto"> email: "posuere.vulputate@sed.com"</p>
+                <p> , </p>
+                <p class="un_salto"> name: "Helen Richards",</p>
+                <p class="un_salto">    phone: "0800 1111",</p>
+                <p class="un_salto"> email: "libero@convallis.edu"</p>
+                <p> ];</p>
+                <br>
+                <p>    contacts.push(</p>
+                <p class="un_salto">     name: prompt("nombre"),</p>
+                <p class="un_salto">     phone: prompt("telefono"),</p>
+                <p class="un_salto">     email: prompt("correo electronico")</p>
+                <p> );</p>
+                    <br>
+                <p> <span class="dominante">let</span> last = contacts.length - 1;</p>
+                    <br>
+                <p>    console.log(`$contacts[0].name / $contacts[0].phone / $contacts[0].email`);</p>
+                <p>    console.log(`$contacts[last].name / $contacts[last].phone / $contacts[last].email`);</p>
+            </div>
+        </div>
+
+        <h3 id="cuarto">Cuarta practica.</h3>
+        <p class="parrafos">Durante la última modificación del programa con la lista de contactos, permitimos al usuario agregar un nuevo contacto con los datos ingresados ​​por el usuario mientras se ejecuta el programa. Vayamos un paso más allá: intentemos modificar el programa para que el usuario pueda elegir qué quiere hacer con la lista. Tendrán la opción de:</p>
+        <br>
+        <p class="parrafos">
+            mostrando el primer contacto (primero) <br>
+            mostrando el último contacto (último) <br>
+            agregando un nuevo contacto (nuevo) <br>
+        </p>
+        <br>
+        <p class="parrafos">
+            Al agregar un nuevo contacto, verifique si el usuario ha ingresado todos los datos necesarios. Si falta al menos uno de los tres valores (nombre, teléfono o correo electrónico), no agregue el contacto.</p>
+            <div class="codigo p_redondas">
+                <div>
+                    <p><span class="dominante">let</span> contacts = [</p>
+                    <p class="un_salto"> name: "Maxwell Wright",</p>
+                    <p class="un_salto">phone: "(0191) 719 6495",</p>
+                    <p class="un_salto">email: "Curabitur.egestas.nunc@nonummyac.co.uk"</p>
+                    <p>, </p>
+                    <p class="un_salto">name: "Raja Villarreal",</p>
+                    <p class="un_salto"> phone: "0866 398 2895",</p>
+                    <p class="un_salto"> email: "posuere.vulputate@sed.com"</p>
+                    <p>, </p>
+                    <p class="un_salto"> name: "Helen Richards",</p>
+                    <p class="un_salto"> phone: "0800 1111",</p>
+                    <p class="un_salto"> email: "libero@convallis.edu"</p>
+                    <p>];</p>
+                    <br>
+                    <p><span class="dominante">let</span> last = contacts.length - 1;</p>
+                    <br>
+                    <p><span class="dominante">let</span> opcion = prompt("opciones: mostrar primero(primero), mostrar ultimo(ultimo), agregar nuevo contacto(agregar).")</p>
+                    <br>
+                    <p>switch(opcion) </p>
+                        <p class="un_salto"> case 'primero':</p>
+                        <p class="un_salto"> console.log(`$contacts[0].name / $contacts[0].phone / $contacts[0].email`);</p>
+                        <p class="un_salto"> brack;</p>
+                        <br>
+                        <p class="un_salto">case 'ultimo':</p>
+                        <p class="un_salto"> console.log(`$contacts[last].name / $contacts[last].phone / $contacts[last].email`);</p>
+                        <p class="un_salto"> brack;</p>
+                        <br>
+                        <p class="un_salto">case 'agregar':</p>
+                        <p class="un_salto"> <span class="dominante">let</span> nombre = prompt("nombre");</p>
+                        <p class="un_salto"> <span class="dominante">let</span> telefono = prompt("telefono");</p>
+                        <p class="un_salto"> <span class="dominante">let</span> correo = prompt("correo electronico");</p>
+                        <br>
+                        <p class="un_salto"> if(nombre !== null && telefono !== null && correo !== null) </p>
+                            <p class="dos_saltos">     contacts.push(</p>
+                                <p class="tres_saltos">     name: nombre,</p>
+                                <p class="tres_saltos"> phone: telefono,</p>
+                                <p class="tres_saltos"> email: correo</p>
+                                <p class="dos_saltos"> );</p>
+                                <p class="un_salto"> else </p>
+                                    <p class="dos_saltos"> alert("falto llenar algun campo")</p>
+                                    <p class="un_salto"> </p>
+                                    <p class="un_salto"> break;</p>
+                                    <br>
+                                    <p class="un_salto">default:</p>
+                                    <p class="un_salto">alert("opcion no valida.") </p>    
+                                    <p>;</p>
+                </div>
+            </div>
+
+            <h3 id="quinta">Quinta practica.</h3>
+            <p class="parrafos">Podemos mejorar un poco nuestro programa de lista de contactos usando bucles. Ahora puede intentar mostrar no sólo el primer o el último contacto, sino todos los contactos de la lista, independientemente de su número.</p>
+            <p class="parrafos">Además, intente encerrar todo el programa en un bucle para que al usuario se le pregunte repetidamente qué quiere hacer. El usuario puede elegir:</p>
+            <br>
+            <p class="parrafos">mostrar el primer contacto (primero)</p>
+            <p class="parrafos">mostrar el último contacto (último)</p>
+            <p class="parrafos">mostrar todos los contactos (todos)</p>
+            <p class="parrafos">agregar un nuevo contacto (nuevo)</p>
+            <p class="parrafos">salir del programa (salir)</p>
+            <br>
+            <p class="parrafos">Luego de ejecutar la acción seleccionada, el programa le dará la oportunidad de elegir nuevamente. El programa debe finalizar las acciones solo después de que el usuario dé un comando específico, por ejemploabandonar.</p>
+            <div class="codigo p_redondas">
+                <div>
+                    <pre>
+                    <code>
+let contactosPract5 = [
+    name: "Maxwell Wright",
+    phone: "(0191) 719 6495",
+    email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+    , 
+    name: "Raja Villarreal",
+    phone: "0866 398 2895",
+    email: "posuere.vulputate@sed.com"
+    , 
+    name: "Helen Richards",
+    phone: "0800 1111",
+    email: "libero@convallis.edu"
+    ];
+
+
+function quintaPractica() 
+    let contacts = contactosPract5;
+    let salir = true;
+    let last = contacts.length - 1;
+
+    do
+        let opcion = prompt("opciones: \nmostrar primero(primero)\n mostrar ultimo(ultimo)\n  agregar nuevo contacto(agregar)\n mostrar todo(todo)\n salir(salir)")
+
+    switch(opcion) 
+        case 'primero':
+            console.log(`$contacts[0].name / $contacts[0].phone / $contacts[0].email`);
+            brack;
+        case 'ultimo':
+            console.log(`$contacts[last].name / $contacts[last].phone / $contacts[last].email`);
+            brack;
+        case 'agregar':
+            let nombre = prompt("nombre");
+            let telefono = prompt("telefono");
+            let correo = prompt("correo electronico");
+            if(nombre !== '' && telefono !== '' && correo !== '') 
+                contactosPract5.push(
+                    name: nombre,
+                    phone: telefono,
+                    email: correo
+                );
+            else 
+                alert("falto llenar algun campo")
+            
+            break;
+            case 'todo':
+                for(let cont of contactosPract5)
+                    console.log(`name: $cont.name phone: $cont.phone email: $cont.email`);
+                
+                break;
+            case 'salir':
+                salir = false;
+                break;
+        default:
+            alert("opcion no valida.")     
+    ;
+    while(salir == true);
+
+                    </code>
+                    </pre>
+                </div>
+            </div>
+
+            <h3 id="sexta">Sexta practica.</h3>
+            <p class="parrafos">Nuestro programa ha crecido bastante, lo que hace que sea un poco difícil de leer. Es especialmente visible en la instrucción de cambio, donde se incluye la mayor parte de la lógica. Intente organizar el código de su programa mediante el uso de funciones. Defina y llame a tres funciones en los lugares apropiados:</p>
+            <br>
+            <p class="parrafos">mostrarContacto: la función debe tomar dos argumentos; el primero es la lista de contactos y el segundo es el número de índice del contacto a mostrar; dentro de la función, verifique si se pasan los argumentos correctos, es decir, si los contactos son una matriz (use elinstanciadeArrayconstrucción para esto);</p>
+            <br>
+            <p class="parrafos">Mostrar todos los contactos: la función debe tomar un argumento, la lista de contactos; dentro de la función, verifique si el argumento dado es una matriz;</p>
+            <br>
+            <p class="parrafos">añadir nuevo contacto: la función debe tomar cuatro argumentos, una lista de contactos y los datos del nuevo contacto, es decir: nombre, teléfono y número; Antes de agregar un nuevo contacto, verifique si el argumento pasado es una matriz y si los datos del nuevo contacto tienen algún valor.</p>
+            <div class="codigo p_redondas">
+                <div>
+                    <pre>
+                    <code>
+let contacts = [
+        nombre: "Maopcionwell Wright",
+        telefono: "(0191) 719 6495",
+        email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+        , 
+        nombre: "Raja Villarreal",
+        telefono: "0866 398 2895",
+        email: "posuere.vulputate@sed.com"
+        , 
+        nombre: "Helen Richards",
+        telefono: "0800 1111",
+        email: "libero@convallis.edu"
+        ];
+    
+    let opcion = true;
+    
+    while (opcion) 
+        opcion = prompt("Opciones:\n1. Mostrar primer contacto\n2. Mostrar último contacto\n3. Mostrar todo\n4. Agregar\n5. Salir");
+    
+        switch (opcion) 
+            case "1":
+                mostrarC(contacts, 0);
+                break;
+            case "2":
+                let mostrarUltimoc = contacts.length - 1;
+                console.log(`$contacts[mostrarUltimoc].nombre / $contacts[mostrarUltimoc].telefono / $contacts[mostrarUltimoc].email`);
+                break;
+            case "3":
+                mostrarT(contacts);
+                break;
+            case "4":
+                let nuevoNombre = prompt("nombre.");
+                let nuevotel = prompt("telefono");
+                let nuevoEmail = prompt("correo electrónico");
+                nuevo(contacts, nuevoNombre, nuevotel, nuevoEmail);
+                break;
+            case "5":
+                opcion = false;
+                break;
+            default:
+                console.log("opcion invalida.");
+        
+    
+    
+    function mostrarC(contacts, i) 
+        if (contacts instanceof Array && i >= 0 && i < contacts.length) 
+            console.log(`$contacts[i].nombre / $contacts[i].telefono / $contacts[i].email`);
+         else 
+            console.log("Error: Índice de contacto inválido.");
+        
+    
+    
+    function mostrarT(contacts) 
+        if (contacts instanceof Array) 
+            for (let i = 0; i < contacts.length; i++) 
+                console.log(`$contacts[i].nombre / $contacts[i].telefono / $contacts[i].email`);
+            
+         else 
+            console.log("Error: La lista de contactos es inválida.");
+        
+    
+    
+    function nuevo(contacts, nombre, telefono, email) 
+        if (contacts instanceof Array && nombre && telefono && email) 
+            let nuevoContacto = 
+                nombre: nombre,
+                telefono: telefono,
+                email: email
+            ;
+            contacts.push(nuevoContacto);
+         else 
+            console.log("porfacor llenar todos los datos.");
+        
+    
+                    </code>
+                    </pre>
+                </div>
+            </div>
+
+            <h3 id="septima">Septima practica.</h3>
+            <p class="parrafos">Darle al usuario la opción de seleccionar unclasificaracción de la lista. Cuando se selecciona esta opción, el usuario debería poder especificar si desea ordenar los contactos por nombre, teléfono o correo electrónico.</p>
+
+            <div class="codigo p_redondas">
+                <div>
+                    <pre>
+                    <code>
+let contacts = [
+        nombre: "Maopcionwell Wright",
+        telefono: "(0191) 719 6495",
+        email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+        , 
+        nombre: "Raja Villarreal",
+        telefono: "0866 398 2895",
+        email: "posuere.vulputate@sed.com"
+        , 
+        nombre: "Helen Richards",
+        telefono: "0800 1111",
+        email: "libero@convallis.edu"
+        ];
+    
+    let opcion = true;
+    
+    while (opcion) 
+        opcion = prompt("Opciones:\n1. Mostrar primer contacto\n2. Mostrar último contacto\n3. Mostrar todo\n4. Agregar\n5. Ordenar\n6. Salir");
+    
+        switch (opcion) 
+            case "1":
+                mostrarC(contacts, 0);
+                break;
+            case "2":
+                let mostrarUltimoc = contacts.length - 1;
+                console.log(`$contacts[mostrarUltimoc].nombre / $contacts[mostrarUltimoc].telefono / $contacts[mostrarUltimoc].email`);
+                break;
+            case "3":
+                mostrarT(contacts);
+                break;
+            case "4":
+                let nuevoNombre = prompt("nombre.");
+                let nuevotel = prompt("telefono");
+                let nuevoEmail = prompt("correo electrónico");
+                nuevo(contacts, nuevoNombre, nuevotel, nuevoEmail);
+                break;
+            case "5":
+                let ordernar = prompt("Opciones:\n1. Por nombre\n2. Por teléfono\n3. Por correo electrónico");
+                switch (ordernar) 
+                    case "1":
+                        ordenarcontactos("nombre");
+                        mostrarT(contacts);
+                        break;
+                    case "2":
+                        ordenarcontactos("telefono");
+                        mostrarT(contacts);
+                        break;
+                    case "3":
+                        ordenarcontactos("email");
+                        mostrarT(contacts);
+                        break;
+                    default:
+                        console.log("opcion invalida.");
+                
+                break;
+            case "6":
+                opcion = false;
+                break;
+            default:
+                console.log("opcion invalida.");
+        
+    
+    
+    function mostrarC(contacts, i) 
+        if (contacts instanceof Array && i >= 0 && i < contacts.length) 
+            console.log(`$contacts[i].nombre / $contacts[i].telefono / $contacts[i].email`);
+         else 
+            console.log("Error: Índice de contacto inválido.");
+        
+    
+    
+    function mostrarT(contacts) 
+        if (contacts instanceof Array) 
+            for (let i = 0; i < contacts.length; i++) 
+                console.log(`$contacts[i].nombre / $contacts[i].telefono / $contacts[i].email`);
+            
+         else 
+            console.log("Error: La lista de contactos es inválida.");
+        
+    
+    
+    function nuevo(contacts, nombre, telefono, email) 
+        if (contacts instanceof Array && nombre && telefono && email) 
+            let nuevoContacto = 
+                nombre: nombre,
+                telefono: telefono,
+                email: email
+            ;
+            contacts.push(nuevoContacto);
+         else 
+            console.log("porfacor llenar todos los datos.");
+        
+    
+    function ordenarcontactos(property) 
+        contacts.sort((a, b) => 
+            if (a[property] > b[property]) return 1;
+            if (a[property] < b[property]) return -1;
+            return 0;
+    );
+    
+                    </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#00FFCA" fill-opacity="0.5" d="M0,160L48,149.3C96,139,192,117,288,117.3C384,117,480,139,576,170.7C672,203,768,245,864,234.7C960,224,1056,160,1152,122.7C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                    <path fill="#000" fill-opacity="1" d="M0,64L48,85.3C96,107,192,149,288,170.7C384,192,480,192,576,181.3C672,171,768,149,864,133.3C960,117,1056,107,1152,133.3C1248,160,1344,224,1392,256L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                  </svg>
+            </div>
+            <div id="pie_pagina">
+                <p class="pie_pri"><span>Primer parcial</span>.</p>
+                <p id="pie_nom">© Manuel Martinez 2023.</p>
+            </div>

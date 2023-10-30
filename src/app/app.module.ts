@@ -7,7 +7,7 @@ import { PaginaComponent } from './pagina/pagina.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PaginaComponent
+    PaginaComponent,
   ],
   imports: [
     BrowserModule

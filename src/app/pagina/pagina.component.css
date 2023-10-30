@@ -17,11 +17,11 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: var(--color-gris);
+    background: #161616;
 }
 a {
     text-decoration: none;
-    color: var(--color-oscuro);
+    color: #000;
 }
 pre {
     white-space: pre-wrap; /* Ajustar al contenedor y desplazar a la siguiente línea si es necesario */
@@ -51,13 +51,13 @@ pre {
 /*en general*/
 
 .resaltar {
-    color: var(--color-furte);
+    color: #00FFCA;
 }
 .dominante {
-    color: var(--color-dominante);
+    color: #05BFDB;
 }
 .claro {
-    color: var(--color-claro);
+    color: #FFFFFF;
 }
 
 
@@ -93,8 +93,8 @@ pre {
 /*contenedores*/
 
 #indice {
-    background: var(--color-gris-oscuro);
-    color: var(--color-furte);
+    background: #161616;
+    color: #00FFCA;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 100px;
@@ -106,8 +106,8 @@ pre {
     margin-bottom: 10px;
 }
 .codigo {
-    background-color: var(--color-gris-oscuro);
-    color: var(--color-claro);
+    background-color: #161616;
+    color: #FFFFFF;
     font-weight: bold;
     width: 100%;
     padding-top: 50px;
@@ -128,7 +128,7 @@ pre {
     padding-bottom: 20px;
 }
 .consola div {
-    color: var(--color-claro);
+    color: #FFFFFF;
     font-weight: bold;
     overflow: auto;
     padding-left: 20px;
@@ -141,7 +141,7 @@ pre {
 #cont_presentacion {
     width: 100%;
     height: 100vh;
-    background: var(--color-oscuro);
+    background-color: #000;
 }
 #cont_practicas {
     width: 80%;
@@ -151,21 +151,21 @@ pre {
 
 #pie_pagina {
     width: 100%;
-    background: var(--color-oscuro);
+    background: #000;
 }
 .pie_pri {
     padding: 30px;
     text-align: center;
-    color: var(--color-claro);
+    color: #FFFFFF;
     font-size: 2em;
     font-weight: bold;
 }
 .pie_pri span {
-    color: var(--color-furte);
+    color: #00FFCA;
 }
 #pie_nom {
     font-size: 12px;
-    color: var(--color-furte);
+    color: #00FFCA;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     padding: 5px;
@@ -178,24 +178,24 @@ h1 {
     padding: 10px;
     margin-bottom: 10px;
     text-align: center;
-    border-bottom: 2px solid var(--color-dominante);
-    color: var(--color-claro);
+    border-bottom: 2px solid #05BFDB;
+    color: #FFFFFF;
 }
 h2{
     text-align: left;
     margin-top: 100px;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: var(--color-furte);
+    color: #00FFCA;
 }
 h3 {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: left;
-    color: var(--color-furte);
+    color: #00FFCA;
 }
 .parrafos {
-    color: var(--color-claro);
+    color: #FFFFFF;
 }
 button {
     margin-top: 20px;
@@ -204,28 +204,28 @@ button {
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: var(--color-furte);
-    color: var(--color-oscuro);
+    background: #00FFCA;
+    color: #000;
     border: none;
     font-weight: bold;
     cursor: pointer;
     transition: all .3s;
 }
 button:hover {
-    background: var(--color-oscuro);
-    color: var(--color-furte);
-    box-shadow: 0 0 10px var(--color-furte);
+    background: #000;
+    color: #00FFCA;
+    box-shadow: 0 0 10px #00FFCA;
 }
 label {
-    color: var(--color-claro);
+    color: #FFFFFF;
     font-weight: bold;
 
 }
 #titulo {
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid var(--color-furte);
-    color: var(--color-furte);
+    border-bottom: 1px solid #00FFCA;
+    color: #00FFCA;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -248,10 +248,10 @@ input:focus {
     padding: 10px;
     font-weight: bold;
     border-radius: 100%;
-    background-color: var(--color-furte);
+    background-color: #00FFCA;
 }
 #subir:hover {
-    background: var(--color-oscuro);
-    color: var(--color-furte);
-    box-shadow: 0  0 10px var(--color-furte);
+    background: #000;
+    color: #00FFCA;
+    box-shadow: 0  0 10px #00FFCA;
 }
