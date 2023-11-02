@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CodigoService } from '../codigo.service';
 
 @Component({
   selector: 'app-pagina',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class PaginaComponent {
 
+  constructor( private _Codigo:CodigoService){
+
+    _Codigo.Carga(["codigo"]);
+  }
 }
