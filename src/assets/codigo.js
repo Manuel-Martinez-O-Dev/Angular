@@ -1,4 +1,4 @@
-alert("godo");
+
 
 
 const prac1 = document.querySelector('#prac_1');
