@@ -1,0 +1,10 @@
+<div>
+    <h2>Consumiendo datos de una API</h2>
+    <div *ngFor="let item of data">
+        <h3>NOMBRE: => {{item.name}}</h3>
+        <p>{{item.location.name}}</p>
+        <p>{{ item.origin.name}}</p>
+        <p>{{ item.id }}</p>
+        <img [src]="item.image" alt="dsd">
+    </div>
+</div>

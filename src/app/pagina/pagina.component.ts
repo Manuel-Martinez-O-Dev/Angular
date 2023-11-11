@@ -12,4 +12,5 @@ export class PaginaComponent {
 
     _Codigo.Carga(["codigo"]);
   }
+
 }

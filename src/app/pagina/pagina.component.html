@@ -33,6 +33,10 @@
                 <li><a href="#lista"><span class="claro">Lista de tareas</span></a>.</li>
             </ul>
         </div>
+
+        <ng-content></ng-content>
+
+
         <h3 id="primera">Primera practica.</h3>
         <p class="parrafos">Nuestra tarea será crear una lista de contactos. Inicialmente, la lista será bastante simple: solo escribiremos a tres personas usando los datos que se muestran en la siguiente tabla. En el resto del curso, volverá a este script y lo ampliará sistemáticamente con nuevas funciones, utilizando los elementos recién aprendidos de JavaScript.</p>
         <br>
@@ -64,6 +68,8 @@
                 <p id="consola1_3"></p>
             </div>
         </div>
+
+        
 
         <h3 id="segundo">Segunda practica.</h3>
         <p class="parrafos">¿Recuerdas la lista de contactos que creaste mientras realizabas la tarea del laboratorio anterior? Hay que admitir que a primera vista parecía bastante extraño. Tuvimos que utilizar nueve variables para almacenar información sobre sólo tres usuarios. Lo que es peor, agregar cada nuevo usuario requeriría la creación de tres variables más. Esto no es ni conveniente ni práctico. Afortunadamente, desde entonces hemos aprendido algo sobre matrices y objetos, lo que nos permitirá guardar nuestra lista de una forma un poco más cómoda. Usando los mismos datos que en la práctica anterior, cree la lista de contactos como una matriz, cada elemento del cual será un objeto que describirá a un solo usuario. Entonces deberíamos obtener una matriz de tres elementos, y cada objeto colocado en ella contendrá tres datos (nombre, teléfono y correo electrónico).</p>
