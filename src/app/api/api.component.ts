@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../service/api.service';
+import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'app-api',
@@ -8,20 +9,35 @@ import { ApiService } from '../service/api.service';
 })
 export class ApiComponent {
 
-  data: any[] = [];
+  name:string = "Python";
+  abrev:string = "Py";
 
-  imagen: String = '';
+  dataUsers: any = [];
+  dataData: any = [];
 
-  constructor(private apiServece: ApiService){ }
+  constructor(private apiService: ApiService, private dataService: DataService){}
 
-  ngOnInit(): void {
-    this.llenarData();
+  ngOnInit()
+  {
+    this.apiService.getUsers().subscribe( (data) => {
+      this.dataUsers = data;
+    } );
+    
+    this.dataService.getData().subscribe( (data) => {
+   
+      this.dataData = data;
+    } );
   }
 
-  llenarData(){
-    this.apiServece.getData().subscribe( data => {
-      this.data = data;
-      console.log(this.data);
-    });
+  save()
+  {
+    var body = 
+    {
+      name: this.name,
+      abrev: this.abrev
+    }
+    this.dataService.postData(body).subscribe( (data) => {
+      console.log(data)   
+    })
   }
 }

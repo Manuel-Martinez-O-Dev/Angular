@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { PaginaComponent } from './pagina/pagina.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ApiComponent } from './api/api.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { ApiComponent } from './api/api.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [
