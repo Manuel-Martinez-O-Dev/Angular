@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../service/api.service';
 
 @Component({
@@ -8,20 +8,66 @@ import { ApiService } from '../service/api.service';
 })
 export class ApiComponent {
 
-  data: any[] = [];
-
-  imagen: String = '';
+  name:string = "";
+  lastname:string = "";
+  url:string = "";
+  dataSource:any = [];
 
   constructor(private apiServece: ApiService){ }
 
-  ngOnInit(): void {
-    this.llenarData();
+  ngOnInit()
+  {
+    this.apiServece.getListLanguges().subscribe( (data) => {
+      for(var key in data)
+      {
+        var row = {id:key, lastname: data[key].lastname, name: data[key].name, url: data[key].url}
+        this.dataSource.push(row)
+      }
+      console.log(this.dataSource)
+    } )
   }
 
-  llenarData(){
-    this.apiServece.getData().subscribe( data => {
-      this.data = data;
-      console.log(this.data);
-    });
+  save()
+  {
+    let body = 
+    {
+      name: this.name,
+      lastname: this.lastname,
+      url: this.url
+    }
+    this.apiServece.postLanguage(body).subscribe( (data) => {
+      if(data!=null)
+      {
+        window.location.reload();
+      }
+    })
+  }
+
+  borrar(id:string){
+    let aux = confirm("Esta Seguro de Borrar")
+    if(!aux) return
+    this.apiServece.deleteLanguage(id).subscribe( (data) => {
+      if(data==null)
+      {
+        window.location.reload();
+      }
+    })
+  }
+
+  actualizar(id:string){
+    let aux = confirm("Esta Seguro de Actualizar")
+    let body = 
+    {
+      lastname: prompt("Nuevo apellido:"),
+      name: prompt("Nuevo nombre:"),
+      url: prompt("Nuevo perfil introduce el url:")
+    }    
+    if(!aux) return
+    this.apiServece.updateLanguage(id, body).subscribe( (data) => {
+      if(data!=null)
+      {
+        window.location.reload();
+      }
+    })
   }
 }

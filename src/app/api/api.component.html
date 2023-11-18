@@ -1,10 +1,39 @@
-<div>
-    <h2>Consumiendo datos de una API</h2>
-    <div *ngFor="let item of data">
-        <h3>NOMBRE: => {{item.name}}</h3>
-        <p>{{item.location.name}}</p>
-        <p>{{ item.origin.name}}</p>
-        <p>{{ item.id }}</p>
-        <img [src]="item.image" alt="dsd">
+<h1>SEGUNDO PARCIAL</h1>
+<div class="cont">
+    <div class="cont_form">
+        <form>
+            <label>Nombre::</label><br>
+            <input type="text" [(ngModel)]="name" name="name"><br>
+            <label>Apellido::</label><br>
+            <input type="text" [(ngModel)]="lastname" name="lastname"><br>
+            <label>imagen-url::</label><br>
+            <input type="text" [(ngModel)]="url" name="url"><br>
+            <input type="button" value="Agregar" (click)="save()" id="boton">
+        </form>
+    </div>
+    <div class="cont_table">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nro</th>
+                    <th>NOMBRE</th>
+                    <th>APELLODO</th>
+                    <th>PERFIL</th>
+                    <th>AJUSTES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of dataSource; index as nro">
+                    <th>{{nro + 1}}</th>
+                    <th>{{row.name}}</th>
+                    <th>{{row.lastname}}</th>
+                    <th><img [src]="row.url" alt=""></th>
+                    <th>
+                        <button (click)="actualizar(row.id)">Editar</button>
+                        <button (click)="borrar(row.id)">Eliminar</button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
