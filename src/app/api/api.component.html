@@ -30,14 +30,17 @@
     </table>            
 </div>
 
+
 <div>
-    <label for="name">Nombre:</label>
-    <input type="text" id="name" [(ngModel)]="name" />
-  </div>
-  
-  <div>
-    <label for="abrev">Abreviatura:</label>
-    <input type="text" id="abrev" [(ngModel)]="abrev" />
-  </div>
-  
-  <button (click)="save()">Guardar</button>
+    <form>
+        <label>Nombres</label><br>
+        <input type="text" [ngModel]="name" [ngModelOptions]="{ standalone: true }"><br>
+        {{name}}
+        <label>Abrev:</label><br>
+        <input type="text" [ngModel]="abrev" [ngModelOptions]="{ standalone: true }"><br>
+        {{abrev}}
+        <input type="button" value="Enviar" (click)="save()">
+    </form>
+</div>
+
+
