@@ -1,3 +1,94 @@
-div {
+:root {
+    --color-dominante: #05BFDB;
+    --color-furte: #00FFCA;
+    --color-oscuro: #000;
+    --color-claro: #FFFFFF;
+    --color-gris: #222222;
+    --color-gris-oscuro: #161616;
+}
+
+h1{
+    text-align: center;
+    color: var(--color-furte);
+    margin: 30px;
+}
+
+.cont {
+    width: 100%;
     color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px;
+}
+.cont_form {
+    box-shadow: 0 0 30px var(--color-furte);
+    border-radius: 30px;
+    padding: 30px;
+    margin: 20px;
+    background-color: var(--color-oscuro);
+    flex-wrap: wrap;
+    transition: all 1s;
+}
+.cont_form:hover {
+    box-shadow: 0 0 20px var(--color-furte
+    );
+}
+.cont_table {
+    margin: 20px;
+}
+input {
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+#boton {
+    width: 100%;
+    background-color: var(--color-furte);
+    color: var(--color-oscuro);
+    font-weight: bold;
+}
+table {
+    border: none;
+}
+thead th {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: var(--color-furte);
+    border: none;
+    color: var(--color-gris);
+    border-radius: 5px;
+}
+
+tbody th {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: var(--color-oscuro);
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    font-weight: normal;
+}
+button {
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+    background-color: var(--color-claro);
+    color: var(--color-oscuro);
+    font-weight: bold;
+    padding: 5px;
+}
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 0 10px var(--color-furte);
 }

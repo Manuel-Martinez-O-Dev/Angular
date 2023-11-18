@@ -9,6 +9,8 @@ import { PaginaComponent } from './pagina/pagina.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ApiComponent } from './api/api.component';
 
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { ApiComponent } from './api/api.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     CodigoService

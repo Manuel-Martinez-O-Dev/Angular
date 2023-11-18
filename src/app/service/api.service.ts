@@ -7,11 +7,31 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  private urlApi = 'https://rickandmortyapi.com/api/character/1,183';
+  private url = 'https://practicando-bd-default-rtdb.firebaseio.com/prueba';
 
   constructor(private http: HttpClient) { }
 
-  public getData(): Observable<any> {
-    return this.http.get<any>(this.urlApi);
+  getListLanguges(): Observable<any>
+  {
+    let getUrl = this.url + ".json"
+    return this.http.get(getUrl);
+  }
+
+  postLanguage(body:any): Observable<any>
+  {
+    let postUrl = this.url + ".json"
+    return this.http.post(postUrl, body)
+  }
+
+  deleteLanguage(id:string): Observable<any>
+  {
+    let delUrl = this.url + "/" + id + ".json"
+    return this.http.delete(delUrl)
+  }
+
+  updateLanguage(id:string, body:any): Observable<any>
+  {
+    let uptUrl = this.url + "/" + id + ".json"
+    return this.http.put(uptUrl, body)
   }
 }
