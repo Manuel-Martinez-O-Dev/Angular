@@ -24,7 +24,7 @@ h1{
     padding: 30px;
 }
 .cont_form {
-    box-shadow: 0 0 30px var(--color-furte);
+    box-shadow: 0 0 10px var(--color-furte);
     border-radius: 30px;
     padding: 30px;
     margin: 20px;
@@ -39,6 +39,11 @@ h1{
 .cont_table {
     margin: 20px;
 }
+label {
+    font-size: 14px;
+    padding-left: 20px;
+    color: var(--color-furte);
+}
 input {
     margin-bottom: 30px;
     padding: 10px;
@@ -46,8 +51,9 @@ input {
 }
 #boton {
     width: 100%;
-    background-color: var(--color-furte);
-    color: var(--color-oscuro);
+    background-color: var(--color-oscuro);
+    color: var(--color-furte);
+    box-shadow: 0 0 10px var(--color-furte);
     font-weight: bold;
 }
 table {
@@ -90,5 +96,21 @@ img {
     border-radius: 100px;
     object-fit: cover;
     object-position: center;
-    box-shadow: 0 0 10px var(--color-furte);
+    box-shadow: 0 2px 3px var(--color-furte);
+    transition: all .5s;
+}
+img:hover {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px var(--color-claro);
+}
+span {
+    color: red;
+}
+#editar {
+    background-color: greenyellow;
+}
+#eliminar {
+    background-color: red;
 }
