@@ -11,6 +11,9 @@ export class ApiComponent {
   name:string = "";
   lastname:string = "";
   url:string = "";
+  nameNew:string = "";
+  lastnameNew:string = "";
+  urlNew:string = "";
   dataSource:any = [];
 
   constructor(private apiServece: ApiService){ }
@@ -58,9 +61,9 @@ export class ApiComponent {
     let aux = confirm("Esta Seguro de Actualizar")
     let body = 
     {
-      lastname: prompt("Nuevo apellido:"),
-      name: prompt("Nuevo nombre:"),
-      url: prompt("Nuevo perfil introduce el url:")
+      lastname: this.lastnameNew,
+      name: this.nameNew,
+      url: this.urlNew
     }    
     if(!aux) return
     this.apiServece.updateLanguage(id, body).subscribe( (data) => {

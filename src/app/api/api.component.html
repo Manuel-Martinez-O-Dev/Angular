@@ -2,35 +2,43 @@
 <div class="cont">
     <div class="cont_form">
         <form>
-            <label>Nombre::</label><br>
-            <input type="text" [(ngModel)]="name" name="name"><br>
-            <label>Apellido::</label><br>
-            <input type="text" [(ngModel)]="lastname" name="lastname"><br>
-            <label>imagen-url::</label><br>
+            <label><span>*</span>Nombre::</label><br>
+            <input type="text" [(ngModel)]="name" name="name" required><br>
+            <label><span>*</span>Apellido::</label><br>
+            <input type="text" [(ngModel)]="lastname" name="lastname" required><br>
+            <label><span>*</span>imagen-url::</label><br>
             <input type="text" [(ngModel)]="url" name="url"><br>
-            <input type="button" value="Agregar" (click)="save()" id="boton">
+            <input type="button" value="Agregar nuevo usuario" (click)="save()" id="boton">
         </form>
+        <div>
+            <form>
+                <label><span>*</span>Editar Nombre::</label><br>
+                <input type="text" [(ngModel)]="nameNew" name="nameNew"><br>
+                <label><span>*</span>Editar Apellido::</label><br>
+                <input type="text" [(ngModel)]="lastnameNew" name="lastnameNew"><br>
+                <label><span>*</span>Editar imagen-url::</label><br>
+                <input type="text" [(ngModel)]="urlNew" name="urlNew"><br>
+            </form>
+        </div>
     </div>
     <div class="cont_table">
         <table border="1">
             <thead>
                 <tr>
-                    <th>Nro</th>
+                    <th>PERFIL</th>
                     <th>NOMBRE</th>
                     <th>APELLODO</th>
-                    <th>PERFIL</th>
                     <th>AJUSTES</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let row of dataSource; index as nro">
-                    <th>{{nro + 1}}</th>
+                    <th><img [src]="row.url" alt=""></th>
                     <th>{{row.name}}</th>
                     <th>{{row.lastname}}</th>
-                    <th><img [src]="row.url" alt=""></th>
                     <th>
-                        <button (click)="actualizar(row.id)">Editar</button>
-                        <button (click)="borrar(row.id)">Eliminar</button>
+                        <button (click)="actualizar(row.id)" id="editar">Editar</button>
+                        <button (click)="borrar(row.id)" id="eliminar">Eliminar</button>
                     </th>
                 </tr>
             </tbody>
