@@ -16,6 +16,11 @@ ul {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    background-color: black;
+    box-shadow: 0 0 10px aquamarine;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 10px;
   }
   
   li a:hover:not(.active) {

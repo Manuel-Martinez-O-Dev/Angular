@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 export class LoginComponent {
 
+
   email:string = "";
   pass:string = "";
 
