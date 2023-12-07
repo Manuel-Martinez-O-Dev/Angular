@@ -1,9 +1,19 @@
+:root {
+  --color-dominante: #05BFDB;
+  --color-furte: #00FFCA;
+  --color-oscuro: #000;
+  --color-claro: #FFFFFF;
+  --color-gris: #222222;
+  --color-gris-oscuro: #161616;
+}
+
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: var(--color-oscuro);
   }
   
   li {
@@ -12,21 +22,30 @@ ul {
   
   li a {
     display: block;
-    color: white;
+    color: var(--color-furte);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     background-color: black;
-    box-shadow: 0 0 10px aquamarine;
+    box-shadow: 0 0 5px var(--color-furte);
     font-weight: bold;
     margin: 10px;
     border-radius: 10px;
+    transition: all .3s;
   }
   
   li a:hover:not(.active) {
-    background-color: #111;
+    background-color: var(--color-furte);
+    color: var(--color-oscuro);
+    box-shadow: none;
   }
   
   .active {
     background-color: black;
+  }
+  
+  div
+  {
+    position: sticky;
+    top: 0;
   }
