@@ -1,0 +1,69 @@
+:root {
+    --color-dominante: #05BFDB;
+    --color-furte: #00FFCA;
+    --color-oscuro: #000;
+    --color-claro: #FFFFFF;
+    --color-gris: #222222;
+    --color-gris-oscuro: #161616;
+}
+
+/* Estilo para el contenedor principal */
+div {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: black;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 25px;
+}
+
+/* Estilo para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para el encabezado del formulario */
+h1 {
+    text-align: center;
+    color: var(--color-furte);
+}
+
+/* Estilo para las etiquetas de los campos de entrada */
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--color-furte);
+}
+
+/* Estilo para los campos de entrada */
+input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón */
+button {
+    background-color: var(--color-furte);
+    color: var(--color-oscuro);
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+/* Cambiar el color del botón al pasar el ratón sobre él */
+button:hover {
+    background-color: var(--color-oscuro);
+    box-shadow: 0 0 10px var(--color-furte);
+    color: var(--color-furte);
+}
+img {
+    width: 50px;
+}

@@ -1,17 +1,13 @@
 <app-header></app-header>
 <div>
-    <p>login works!</p>
-<form>
-    <h1>Login</h1>
-    <label>Nombre</label>
-    <input type="text"> 
-    <label>Apellido</label>
-    <input type="text"> 
-    <label>email</label>
-    <input type="text" [(ngModel)]="email" name="email">
-    <label>pass</label>
-    <input type="password" [(ngModel)]="pass" name="pass">    
-    <button (click)="login()">Entrar</button>
-</form>    
-<button (click)="loginGoogle()">Login with Google</button>
+    <form>
+        <h1>Login</h1>
+        <label>email</label>
+        <input type="text" [(ngModel)]="email" name="email">
+        <label>pass</label>
+        <input type="password" [(ngModel)]="pass" name="pass">    
+        <button (click)="login()">Entrar</button>
+    </form>    
+    <button (click)="loginGoogle()">Login with Google</button>
 </div>
+
