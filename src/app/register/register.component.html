@@ -5,9 +5,9 @@
         <label>Correo electronico</label>
         <input type="text" [(ngModel)]="email" name="email">
         <label>Nombre</label>
-        <input type="text">
+        <input type="text" [(ngModel)]="nombre" name="nombre">
         <label>Apellidos</label>
-        <input type="text">
+        <input type="text" [(ngModel)]="apellido" name="apellido">
         <label>Contraseña</label>
         <input type="password" [(ngModel)]="pass" name="pass">    
         <button (click)="guardar()">REGISTRAR</button>

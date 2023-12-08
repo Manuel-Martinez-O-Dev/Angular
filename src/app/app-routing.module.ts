@@ -8,12 +8,14 @@ import { LoginComponent } from './login/login.component';
 import { LabsComponent } from './labs/labs.component';
 
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
   { path: '', component: PaginaComponent },
   { path: '', component: ApiComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent},
+  { path: 'perfil', component: PerfilComponent, ...canActivate(()=>redirectUnauthorizedTo(["/"]))},
   { path: "labs", component:LabsComponent, ...canActivate(()=>redirectUnauthorizedTo(["/"]))}
 ];
 

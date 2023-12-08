@@ -1,0 +1,79 @@
+/* perfil.component.css */
+:root {
+    --color-dominante: #05BFDB;
+    --color-furte: #00FFCA;
+    --color-oscuro: #000;
+    --color-claro: #FFFFFF;
+    --color-gris: #222222;
+    --color-gris-oscuro: #161616;
+}
+
+/* perfil.component.css */
+div {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-oscuro);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Puedes ajustar el ancho según tus necesidades */
+  }
+  
+  h1 {
+    color: var(--color-furte);
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--color-claro);
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: var(--color-furte);
+    color: var(--color-oscuro);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: all .3s;
+  }
+  
+  button:hover {
+    background-color: var(--color-oscuro);
+    color: var(--color-furte);
+    box-shadow: 0 0 5px var(--color-furte);
+  }
+  
+  /* Estilos adicionales para el botón de editar */
+  button.editar {
+    background-color: #008CBA;
+  }
+  
+  button.editar:hover {
+    background-color: #0077a3;
+  }
+  
+  /* Estilos adicionales para el botón de guardar */
+  button.guardar {
+    background-color: #4CAF50;
+  }
+  
+  button.guardar:hover {
+    background-color: #45a049;
+  }
