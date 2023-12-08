@@ -1,3 +1,17 @@
+
+:root {
+  --color-dominante: #05BFDB;
+  --color-furte: #00FFCA;
+  --color-oscuro: #000;
+  --color-claro: #FFFFFF;
+  --color-gris: #222222;
+  --color-gris-oscuro: #161616;
+}
+
+
+img {
+  width: 30px;
+}
 /* styles.css */
 
 
@@ -14,20 +28,21 @@
   form {
     width: 300px; /* Ajusta el ancho del formulario según tus preferencias */
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: var(--color-oscuro);
     margin: auto;
   }
   
   h1 {
     text-align: center;
+    color: var(--color-furte);
   }
   
   label {
     display: block;
     margin-top: 10px;
+    color: var(--color-furte);
+    font-weight: bold;
   }
   
   input {
@@ -41,14 +56,21 @@
   button {
     width: 100%;
     padding: 10px;
-    background-color: aqua;
-    color: #000;
+    background-color: var(--color-furte);
+    color: var(--color-oscuro);
+    font-weight: bold;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
   }
   
   button:hover {
-    background-color: aquamarine;
+    background-color: var(--color-oscuro);
+    color: var(--color-furte);
+    box-shadow: 0 0 10px var(--color-furte);
   }
   

@@ -1,7 +1,7 @@
 <h1>SEGUNDO PARCIAL</h1>
 <div class="cont">
-    <div class="cont_form">
-        <form>
+    <div class="cont_form" *ngIf="user!=null">
+        <form *ngIf="user!=null">
             <label><span>*</span>Nombre::</label><br>
             <input type="text" [(ngModel)]="name" name="name" required><br>
             <label><span>*</span>Apellido::</label><br>
@@ -28,7 +28,7 @@
                     <th>PERFIL</th>
                     <th>NOMBRE</th>
                     <th>APELLODO</th>
-                    <th>AJUSTES</th>
+                    <th *ngIf="user!=null">AJUSTES</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,7 +36,7 @@
                     <th><img [src]="row.url" alt=""></th>
                     <th>{{row.name}}</th>
                     <th>{{row.lastname}}</th>
-                    <th>
+                    <th *ngIf="user!=null">
                         <button (click)="actualizar(row.id)" id="editar">Editar</button>
                         <button (click)="borrar(row.id)" id="eliminar">Eliminar</button>
                     </th>

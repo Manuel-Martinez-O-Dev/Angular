@@ -10,12 +10,14 @@ import { AuthService } from 'src/app/service/auth.service';
 export class RegisterComponent {
 
   email:string = "";
+  nombre:string = "";
+  apellido:string = "";
   pass:string = "";
 
   constructor(private authService:AuthService, private router:Router){}
 
   guardar(){
-    this.authService.register(this.email, this.pass).then(res=>{
+    this.authService.register(this.email, this.pass, this.nombre, this.apellido).then(res=>{
       this.router.navigate(["/"])
     }).catch(error=>{
       console.log(error)
