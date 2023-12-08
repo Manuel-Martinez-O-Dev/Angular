@@ -1,33 +1,43 @@
 <app-header></app-header>
+
 <!-- perfil.component.html -->
 <div>
-    <h1>Perfil de Usuario</h1>
-  
-    <!-- Mostrar campos de edición si está en modo de edición -->
-    <ng-container *ngIf="editing; else mostrarPerfil">
-      <label>Nombre</label>
-      <input type="text" [(ngModel)]="nombre" name="nombre">
-  
-      <label>Apellido</label>
-      <input type="text" [(ngModel)]="apellido" name="apellido">
-  
-      <button (click)="guardarCambios()">Guardar</button>
+  <h1>Perfil de Usuario</h1>
+
+  <!-- Mostrar foto de perfil -->
+  <img [src]="userPhoto" class="foto-perfil" *ngIf="!editing">
+
+  <!-- Campos de edición si está en modo de edición -->
+  <ng-container *ngIf="editing; else mostrarPerfil">
+    <!-- Agrega campos para editar el nombre, apellido y la foto de perfil -->
+    <label>Nombre</label>
+    <input type="text" [(ngModel)]="nombre" name="nombre">
+
+    <label>Apellido</label>
+    <input type="text" [(ngModel)]="apellido" name="apellido">
+
+    <label>Foto de Perfil (URL)</label>
+    <input type="text" [(ngModel)]="userPhoto" name="userPhoto">
+
+    <button (click)="guardarCambios()">Guardar</button>
+  </ng-container>
+
+  <!-- Mostrar perfil normal si no está en modo de edición -->
+  <ng-template #mostrarPerfil>
+    <ng-container *ngIf="nombre && apellido; else soloEmail">
+      <p>Bienvenido, {{ nombre }} {{ apellido }}!</p>
     </ng-container>
-  
-    <!-- Mostrar perfil normal si no está en modo de edición -->
-    <ng-template #mostrarPerfil>
-      <ng-container *ngIf="nombre && apellido; else soloEmail">
-        <p>Bienvenido, {{ nombre }} {{ apellido }}!</p>
-      </ng-container>
-      <ng-template #soloEmail>
-        <p>Bienvenido, {{ user }}!</p>
-      </ng-template>
+    <ng-template #soloEmail>
+      <p>Bienvenido, {{ user }}!</p>
     </ng-template>
-  
-    <!-- Botón para activar la edición -->
-    <button *ngIf="!editing" (click)="editar()">Editar</button>
-  
-    <!-- Botón para cerrar sesión -->
-    <button (click)="salir()">Cerrar sesión</button>
-  </div>
+  </ng-template>
+
+  <!-- Botón para activar la edición -->
+  <button *ngIf="!editing" (click)="editar()">Editar</button>
+
+  <!-- Botón para cerrar sesión -->
+  <button (click)="salir()">Cerrar sesión</button>
+</div>
+
+
   

@@ -6,7 +6,7 @@
             <a href="/" (click)="salir()" *ngIf="user!=null">Cerrar secion</a>
         </li>
         <li style="float:right">
-            <a  routerLink="/register">LogUp</a>
+            <a routerLink="/register">LogUp</a>
         </li>
         <li style="float:right" *ngIf="user==null">
             <a routerLink="/login"><span *ngIf="user==null">LogIn</span><span *ngIf="user!=null">{{user}}</span></a>

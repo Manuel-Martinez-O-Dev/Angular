@@ -1,6 +1,56 @@
-button{
-    width: 100vw;
-    background-color: aquamarine;
-    color: black;
-    padding: 40px;
-}
+:root {
+    --color-dominante: #05BFDB;
+    --color-furte: #00FFCA;
+    --color-oscuro: #000;
+    --color-claro: #FFFFFF;
+    --color-gris: #222222;
+    --color-gris-oscuro: #161616;
+  }
+
+/* crud-info.component.css */
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-oscuro);
+  }
+  
+  h1 {
+    color: var(--color-furte);
+    margin-bottom: 20px;
+  }
+  
+  p {
+    color: var(--color-claro);
+    line-height: 1.5;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    color: var(--color-claro);
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    color: var(--color-furte);
+    margin-top: 20px;
+  }
+  
+  /* Estilos para los beneficios y la implementación */
+  ul {
+    margin-left: 20px;
+  }
+  
+  /* Estilos para el resumen */
+  p:last-child {
+    margin-top: 20px;
+  }
+  
+
+  

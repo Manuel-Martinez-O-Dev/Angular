@@ -75,4 +75,20 @@ export class AuthService {
     }
   }
 
+
+  actualizarPerfil(nombre: string, apellido: string, fotoPerfil: string) {
+    const user = this.auth.currentUser;
+
+    if (user) {
+      // Actualizar el perfil del usuario con el nuevo nombre, apellido y foto de perfil
+      return updateProfile(user, {
+        displayName: `${nombre} ${apellido}`,
+        photoURL: fotoPerfil,
+      });
+    } else {
+      // El usuario no está autenticado
+      console.error('El usuario no está autenticado.');
+      throw new Error('El usuario no está autenticado.');
+    }
+  }
 }
