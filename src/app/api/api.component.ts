@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../service/api.service';
+import { AuthService } from '../service/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-api',
@@ -16,7 +18,9 @@ export class ApiComponent {
   urlNew:string = "";
   dataSource:any = [];
 
-  constructor(private apiServece: ApiService){ }
+  user:any = "";
+
+  constructor(private apiServece: ApiService,private authService:AuthService, private auth:AuthService, private router: Router){ }
 
   ngOnInit()
   {
@@ -28,6 +32,11 @@ export class ApiComponent {
       }
       console.log(this.dataSource)
     } )
+
+    this.user = this.auth.getuser()?.displayName;
+    if(this.user == null){
+      this.user = this.auth.getuser()?.email; 
+    }
   }
 
   save()
@@ -71,6 +80,15 @@ export class ApiComponent {
       {
         window.location.reload();
       }
+    })
+  }
+
+
+  salir(){
+    this.auth.logout().then(res=>{
+      this.router.navigate(["/"])
+    }).catch(error=>{
+      console.log(error);
     })
   }
 }

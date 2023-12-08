@@ -74,4 +74,5 @@ export class AuthService {
       throw new Error('El usuario no está autenticado.');
     }
   }
+
 }
